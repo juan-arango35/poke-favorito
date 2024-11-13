@@ -4,7 +4,7 @@ import apiFetch from "./api-fetch";
 
 
 
-export const login = (credentials) => {
+export function login (credentials){
 
   return apiFetch("/login", {body: credentials}).then(userData=>{
     const {token, ...user}=userData;
