@@ -2,7 +2,7 @@ import { tokenKey } from "../config";
 import apiFetch from "./api-fetch";
 //esta funcion recoge informacion del usuario para hacer el login
 
-import React from 'react'
+
 
 export const login = (credentials) => {
 
