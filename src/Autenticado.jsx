@@ -42,9 +42,7 @@ const Autenticado = () => {
     getFavorites().then((data) => setFavorites(data));
   }, []);
   return (
-    <div>
-      <h1>Bienvenidos a colecion de Pokemons</h1>
-
+    <div className="h-screen -mt-8 -mx-8">
       <BrowserRouter>
         <Routes>
           <Route

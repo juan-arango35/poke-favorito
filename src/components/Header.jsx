@@ -7,26 +7,29 @@ import { AuthContext } from "../context/AuthContext";
 const Header = () => {
     const { logout } = useContext(AuthContext);
   return (
-    <div>
-      <ul>
-        <li>
+    <div className="bg-sky-500 py-2">
+      <ul className="flex justify-end items-center mr-5">
+        <li className="mr-5">
           <Link to="/profile">
-            <img src={imgUser} alt="imgUser" />
+            <img src={imgUser} alt="imgUser"  className="w-10"/>
           </Link>
         </li>
-        <li>
+        <li  className="mr-5">
           <Link to="/">
-            <img src={imgSearch} alt="imgSearch" />
+            <img src={imgSearch} alt="imgSearch" className="w-10" />
           </Link>
         </li>
-        <li>
+        <li  className="mr-5">
           <Link to="/favorites">
-            <img src={imgStar} alt="imgStar" />
+            <img src={imgStar} alt="imgStar" className="w-[35px]" />
           </Link>
+        </li>
+        <li  className="mr-5">
+        <button onClick={logout}>Logout</button>
         </li>
        
       </ul>
-      <button onClick={logout}>Cerrar sesion</button>
+ 
     </div>
   );
 };
