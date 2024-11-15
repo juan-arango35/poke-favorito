@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 const Autenticado = () => {
+  const{logout} = useContext(AuthContext)
   return (
-    <div>Autenticado</div>
+    <div>
+      <h1>Bienvenidos a colecion de Pokemons</h1>
+      <button onClick={logout}>Cerrar sesion</button>
+    </div>
   )
 }
 

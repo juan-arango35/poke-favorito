@@ -4,7 +4,7 @@ import apiFetch from "./api-fetch";
 
 
 
-export function login (credentials){
+export function loginn(credentials){
 
   return apiFetch("/login", {body: credentials}).then(userData=>{
     const {token, ...user}=userData;
@@ -13,3 +13,6 @@ export function login (credentials){
   })
 }
 
+export function logoutt(){
+  return apiFetch("/logout", {method: "DELETE"});
+}
