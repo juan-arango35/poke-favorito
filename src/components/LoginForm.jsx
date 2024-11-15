@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import Button from "./Button";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({
@@ -24,23 +25,31 @@ const LoginForm = () => {
       [name]: value,
     });
   }
-  return <div >
-    <form onSubmit={handleSubmit} className="flex flex-col">
-        <input type="text"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="email"
+  return (
+    <div className="border border-sky-500 h-auto px-8 py-4 rounded-lg">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      
+        <input
+          type="text"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          placeholder="email"
+          className="pl-3 py-1"
+         
         />
-        <input type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-        placeholder="password"
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+          placeholder="password"
+           className="pl-3 py-1"
         />
-        <button type="submit">Login</button>
-    </form>
-  </div>;
+        <Button type="submit">Login</Button>
+      </form>
+    </div>
+  );
 };
 
 export default LoginForm;

@@ -1,9 +1,11 @@
 import React from "react";
 import starFill from "../assets/star-fill.svg";
+import Header from "../components/Header";
 
 const FavoritesPage = ({ favorites }) => {
   return (
     <div>
+      <Header/>
       <h1>Favoritos</h1>
       <ul>
         {favorites.map((favorite) => (

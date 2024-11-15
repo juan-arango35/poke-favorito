@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SearchPage from "./pages/SearchPage";
 import FavoritesPage from "./pages/FavoritesPage";
@@ -10,10 +9,9 @@ import {
   getFavorites,
   removeFavorite,
 } from "./services/favorite-service";
+
 const Autenticado = () => {
   const [favorites, setFavorites] = useState([]);
-
-  const { logout } = useContext(AuthContext);
 
   function handleAddFavorite(pokemon) {
     const data = {
@@ -46,7 +44,7 @@ const Autenticado = () => {
   return (
     <div>
       <h1>Bienvenidos a colecion de Pokemons</h1>
-      <button onClick={logout}>Cerrar sesion</button>
+
       <BrowserRouter>
         <Routes>
           <Route
