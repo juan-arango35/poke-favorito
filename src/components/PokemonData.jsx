@@ -35,16 +35,16 @@ const ContentTypes = styled.div`
   gap: 30px;
   margin-bottom: 40px;
   margin-top: 20px;
+
 `;
 const StyleType = styled.p`
   ${({ type }) => css`
     background: ${typeColors[type]};
     font-weight: bold;
-    font-size: 16px;
     color: white;
     border-radius: 10px;
-    padding: 2px 8px;
-    font-size: 10px;
+    padding: 5px 12px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 20px;
   `}
@@ -71,9 +71,14 @@ const PokemonData = ({
     </>
   );
 
+  //funcion para que se muestre en amyuscula el nombre del pokemon
+  const capitalizableLetter=(string)=>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-2xl font-bold mt-4">{dataPokemon.name}</h1>
+      <h1 className="text-2xl font-bold mt-4">{capitalizableLetter(dataPokemon.name)}</h1>
       <p className="text-lg font-bold">{formatId(dataPokemon.id)}</p>
       <img
         className="w-[200px] h-[200px] transition-transform duration-300 ease-in-out transform hover:scale-110"
@@ -83,7 +88,7 @@ const PokemonData = ({
       <ContentTypes >
         {dataPokemon.types.map((element, index) => {
           
-          return <StyleType key={index} type={element.type.name}>{element.type.name}</StyleType>;
+          return <StyleType key={index} type={element.type.name} className="transition-transform duration-300 ease-in-out transform hover:scale-110">{element.type.name}</StyleType>;
         })}
       </ContentTypes>
       <div className="flex gap-5">
@@ -105,7 +110,7 @@ const PokemonData = ({
         </div>
       </div>
       <Button
-        className="mt-5 w-[200px] flex justify-around items-center"
+        className="mt-5 w-[200px] flex justify-around items-center transition-transform duration-300 ease-in-out transform hover:scale-110"
         onClick={() =>
           isFavorite
             ? onRemoveFavorite(dataPokemon)

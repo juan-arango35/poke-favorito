@@ -49,6 +49,9 @@ const typeColors = {
   shadow: "#000",
 };
 const FavoritesPage = ({ favorites }) => {
+  const capitalizableLetter=(string)=>{
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
   return (
     <div>
       <Header />
@@ -58,7 +61,7 @@ const FavoritesPage = ({ favorites }) => {
           <Pokemoncard type={favorite.pokemon_type} key={favorite.id}>
             <div className="flex justify-between w-full mb-4">
               <img src={starFill} alt="estrella" className="w-5" />
-              <p type={favorite.pokemon_type}>#{favorite.id}</p>
+              <p type={favorite.pokemon_type} className="font-bold">#{favorite.id}</p>
             </div>
             <div className="flex justify-center mb-3">
               <img
@@ -68,7 +71,7 @@ const FavoritesPage = ({ favorites }) => {
               />
             </div>
             <ContentName type={favorite.pokemon_type}>
-              <p>{favorite.pokemon_name}</p>
+              <p className="transition-transform duration-300 ease-in-out transform hover:scale-110">{capitalizableLetter(favorite.pokemon_name)}</p>
             </ContentName>
           </Pokemoncard>
         ))}

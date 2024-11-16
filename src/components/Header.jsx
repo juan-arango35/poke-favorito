@@ -4,10 +4,14 @@ import imgSearch from "../assets/search-fill.svg";
 import imgStar from "../assets/star.svg";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { MdCatchingPokemon } from "react-icons/md";
 const Header = () => {
     const { logout } = useContext(AuthContext);
   return (
-    <div className="bg-blue-500 py-2 -ml-10 -mr-10">
+    <div className="bg-blue-500 py-2 -ml-10 -mr-10 flex justify-between">
+      <span className="text-3xl text-red-700  ml-10">
+      <MdCatchingPokemon />
+      </span>
       <ul className="flex justify-end items-center mr-10">
         <li className="mr-5">
           <Link to="/profile">

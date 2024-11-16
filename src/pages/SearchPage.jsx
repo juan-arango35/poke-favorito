@@ -53,7 +53,7 @@ const SearchPage = ({ favorites, onRemoveFavorite, onAddFavorite }) => {
       )}
       {status === "pending" && (
         <div>
-          <p>Cargando...</p>
+          <p><PacmanLoader /></p>
         </div>
       )}
       {status === "succes" && (
