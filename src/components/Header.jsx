@@ -7,7 +7,7 @@ import { AuthContext } from "../context/AuthContext";
 const Header = () => {
     const { logout } = useContext(AuthContext);
   return (
-    <div className="bg-sky-500 py-2">
+    <div className="bg-blue-500 py-2">
       <ul className="flex justify-end items-center mr-5">
         <li className="mr-5">
           <Link to="/profile">

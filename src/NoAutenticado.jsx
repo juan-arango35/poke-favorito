@@ -12,7 +12,7 @@ const NoAutenticado = () => {
   }
   return (
     <div className="h-screen flex flex-col justify-center items-center gap-4 -mt-12">
-      <h1 className="text-3xl text-black font-bold">
+      <h1 className="text-3xl text-black font-bold mb-7">
         Bienvenidos a colecion de Pokemons
       </h1>
       {showLogin ? <LoginForm /> : <SignupForm />}
@@ -24,3 +24,7 @@ const NoAutenticado = () => {
 };
 
 export default NoAutenticado;
+
+/* angelito@mail.com 
+123456
+*/

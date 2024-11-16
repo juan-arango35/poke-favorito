@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { getPokemon } from "../services/pokeapi-service";
 import PokemonData from "../components/PokemonData";
 import img from "../assets/busqueda.png";
-import { AuthContext } from "../context/AuthContext";
 import Header from "../components/Header";
+import Button from "../components/Button";
 
 const SearchPage = ({ favorites, onRemoveFavorite, onAddFavorite }) => {
   const [query, setQuery] = useState("");
@@ -14,7 +14,7 @@ const SearchPage = ({ favorites, onRemoveFavorite, onAddFavorite }) => {
   });
 
   const { status, data: pokemon, error } = state;
-  const { logout } = useContext(AuthContext);
+ 
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -40,12 +40,14 @@ const SearchPage = ({ favorites, onRemoveFavorite, onAddFavorite }) => {
           placeholder="Nombre del pokemon"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          className=" px-4 py-2 rounded-lg mt-4"
         />
+        <Button className="ml-4" type="submit">Buscar</Button>
       </form>
       {status === "idle" && (
-        <div>
+        <div className="flex flex-col justify-center items-center">
           {" "}
-          <img src={img} alt="pokemon" />
+          <img src={img} alt="pokemon" className="w-[200px]"/>
           <p>Realiza tu busqueda</p>
         </div>
       )}
