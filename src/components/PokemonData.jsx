@@ -34,6 +34,7 @@ const ContentTypes = styled.div`
   display: flex;
   gap: 30px;
   margin-bottom: 40px;
+  margin-top: 20px;
 `;
 const StyleType = styled.p`
   ${({ type }) => css`
@@ -75,7 +76,7 @@ const PokemonData = ({
       <h1 className="text-2xl font-bold mt-4">{dataPokemon.name}</h1>
       <p className="text-lg font-bold">{formatId(dataPokemon.id)}</p>
       <img
-        className="w-[200px] h-[200px]"
+        className="w-[200px] h-[200px] transition-transform duration-300 ease-in-out transform hover:scale-110"
         src={dataPokemon.sprites.other["official-artwork"].front_default}
         alt={dataPokemon.name}
       />
