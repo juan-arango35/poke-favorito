@@ -21,14 +21,14 @@ const Header = () => {
   return (
     <header className="bg-gradient-to-r from-blue-500 to-blue-500 text-white shadow-lg" >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 transition-transform duration-300 ease-in-out transform hover:scale-110">
           <MdCatchingPokemon className="h-6 w-6" />
           <span className="text-xl font-bold">Mi Sitio</span>
         </div>
         <nav className="hidden md:flex space-x-6">
           <Link
             to={"/profile"}
-            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300  duration-300 transition-transform  ease-in-out transform hover:scale-110"
           >
             <FaRegUser className="h-6 w-6" />
             <span>Perfil</span>
@@ -37,21 +37,21 @@ const Header = () => {
 
           <Link
             to={"/"}
-            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300   transition-transform duration-300 ease-in-out transform hover:scale-110"
           >
             <FiSearch className="h-6 w-6" />
             <span>Buscar</span>
           </Link>
           <Link
             to={"/favorites"}
-            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300  duration-300 transition-transform  ease-in-out transform hover:scale-110"
           >
             <FaRegStar className="h-6 w-6" />
             <span>Favoritos</span>
           </Link>
           <button
             onClick={logout}
-            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600   hover:text-yellow-600 transition duration-300 "
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600   hover:text-yellow-600   transition-transform duration-300 ease-in-out transform hover:scale-110"
           >
             <RiLogoutCircleRLine className="h-6 w-6" />
             <span>salir</span>

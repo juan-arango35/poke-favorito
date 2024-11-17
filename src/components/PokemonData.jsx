@@ -78,7 +78,7 @@ const PokemonData = ({
 
   return (
     <div className="flex flex-col items-center">
-      <h1 className="text-2xl font-bold mt-4">{capitalizableLetter(dataPokemon.name)}</h1>
+      <h1 className="text-2xl font-bold mt-4 transition-transform duration-300 ease-in-out transform hover:scale-110">{capitalizableLetter(dataPokemon.name)}</h1>
       <p className="text-lg font-bold">{formatId(dataPokemon.id)}</p>
       <img
         className="w-[200px] h-[200px] transition-transform duration-300 ease-in-out transform hover:scale-110"
@@ -98,7 +98,7 @@ const PokemonData = ({
             {dataPokemon.weight / 10} kg
           </div>
 
-          <p className="text-center font-bold mt-4">Peso</p>
+          <p className="text-center font-bold mt-4 transition-transform duration-300 ease-in-out transform hover:scale-110">Peso</p>
         </div>
         <span className="w-0.5 h-16 bg-gray-400"></span>
         <div className="flex flex-col">
@@ -106,7 +106,7 @@ const PokemonData = ({
             <LiaRulerVerticalSolid />
             {dataPokemon.height / 10} m
           </div>
-          <p className="text-center font-bold mt-4">Altura</p>
+          <p className="text-center font-bold mt-4 transition-transform duration-300 ease-in-out transform hover:scale-110">Altura</p>
         </div>
       </div>
       <Button

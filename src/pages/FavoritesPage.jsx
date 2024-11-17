@@ -55,7 +55,7 @@ const FavoritesPage = ({ favorites }) => {
   return (
     <div className="">
       <Header />
-      <h1 className="text-3xl font-bold mt-4 mb-4">Favoritos</h1>
+      <h1 className="text-3xl font-bold mt-4 mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">Favoritos</h1>
       <ul className="flex flex-wrap justify-center gap-9">
         {favorites.map((favorite) => (
           <Pokemoncard type={favorite.pokemon_type} key={favorite.id}>
