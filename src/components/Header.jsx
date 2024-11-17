@@ -19,7 +19,7 @@ const Header = () => {
     setVisible(!visible);
   };
   return (
-    <header className="bg-gradient-to-r from-blue-500 to-blue-500 text-white shadow-lg " >
+    <header className="bg-gradient-to-r from-blue-500 to-blue-500 text-white shadow-lg" >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <MdCatchingPokemon className="h-6 w-6" />
@@ -28,28 +28,30 @@ const Header = () => {
         <nav className="hidden md:flex space-x-6">
           <Link
             to={"/profile"}
-            className="flex items-center space-x-1 hover:text-gray-600 transition duration-300"
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
           >
             <FaRegUser className="h-6 w-6" />
             <span>Perfil</span>
           </Link>
+
+
           <Link
             to={"/"}
-            className="flex items-center space-x-1 hover:text-gray-600 transition duration-300"
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
           >
             <FiSearch className="h-6 w-6" />
             <span>Buscar</span>
           </Link>
           <Link
             to={"/favorites"}
-            className="flex items-center space-x-1 hover:text-gray-600 transition duration-300"
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
           >
             <FaRegStar className="h-6 w-6" />
             <span>Favoritos</span>
           </Link>
           <button
             onClick={logout}
-            className="flex items-center space-x-1 hover:text-gray-600 transition duration-300"
+            className="flex items-center space-x-1 px-4 py-2 font-bold  hover:bg-cyan-600   hover:text-yellow-600 transition duration-300 "
           >
             <RiLogoutCircleRLine className="h-6 w-6" />
             <span>salir</span>
@@ -72,17 +74,17 @@ const Header = () => {
           visible ? "max-h-screen" : "max-h-0"
         } overflow-hidden transition-all duration-300 ease-in-out`}
       >
-        <nav className="flex flex-col space-y-4 px-4 py-2 bg-blue-400">
+        <nav className="flex flex-col space-y-2 px-4 py-2 bg-blue-400">
           <Link
             to="/profile"
-            className="flex items-center space-x-2 text-white hover:text-yellow-300 transition duration-300"
+            className="flex items-center space-x-2 text-white py-1 px-2 rounded-md mr-2  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
           >
             <FaRegUser className="h-4 w-4" />
             <span className="font-bold">Inicio</span>
           </Link>
           <Link
             to="/"
-            className="flex items-center space-x-2 text-white hover:text-yellow-300 transition duration-300"
+            className="flex items-center space-x-2 text-white py-1 px-2 rounded-md mr-2  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
           >
             <FiSearch className="h-4 w-4" />
             <span className="font-bold">Buscar</span>
@@ -90,12 +92,12 @@ const Header = () => {
 
           <Link
             to="/favorites"
-            className="flex items-center space-x-2 text-white hover:text-yellow-300 transition duration-300"
+            className="flex items-center space-x-2 text-white py-1 px-2 rounded-md mr-2  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300"
           >
             <FaRegStar className="h-4 w-4" />
             <span className="font-bold">Favoritos</span>
           </Link>
-          <button onClick={logout} className="flex items-center space-x-2 text-white hover:text-yellow-300 transition duration-300">
+          <button onClick={logout} className="flex items-center space-x-2 text-white py-1 px-2 rounded-md mr-2  hover:bg-cyan-600  hover:text-yellow-300 transition duration-300">
           <RiLogoutCircleRLine className="h-5 w-5" /><span className="font-bold">Salir</span>
             </button>
         </nav>
