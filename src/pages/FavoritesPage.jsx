@@ -53,7 +53,7 @@ const FavoritesPage = ({ favorites }) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
   return (
-    <div>
+    <div className="">
       <Header />
       <h1 className="text-3xl font-bold mt-4 mb-4">Favoritos</h1>
       <ul className="flex flex-wrap justify-center gap-9">

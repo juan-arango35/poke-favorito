@@ -42,7 +42,7 @@ const Autenticado = () => {
     getFavorites().then((data) => setFavorites(data));
   }, []);
   return (
-    <div className="h-screen -mt-8 -mx-8">
+    <div className="h-screen -mt-8 -mx-8 w-screen">
       <BrowserRouter>
         <Routes>
           <Route
