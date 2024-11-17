@@ -48,7 +48,7 @@ const SearchPage = ({ favorites, onRemoveFavorite, onAddFavorite }) => {
         <div className="flex flex-col justify-center items-center">
           {" "}
           <img src={img} alt="pokemon" className="w-[200px]"/>
-          <p>Realiza tu busqueda</p>
+          <p className="mt-4">Realiza tu Busqueda</p>
         </div>
       )}
       {status === "pending" && (

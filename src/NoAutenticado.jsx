@@ -13,11 +13,11 @@ const NoAutenticado = () => {
   return (
     <div className="h-screen flex flex-col justify-center items-center gap-4 -mt-12">
       <h1 className="text-3xl text-black font-bold mb-7 transition-transform duration-300 ease-in-out transform hover:scale-110">
-        Bienvenidos a colección de Pokemones
+        Bienvenidos a la colección de Pokemones
       </h1>
       {showLogin ? <LoginForm /> : <SignupForm />}
       <button onClick={handleCLick}>
-        {showLogin ? "Crear cuenta" : "Iniciar sesion"}
+        {showLogin ? "Crear cuenta" : "Iniciar sesión"}
       </button>
     </div>
   );
