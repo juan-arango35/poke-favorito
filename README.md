@@ -49,7 +49,7 @@ La combinación de interacción con la API y la gestión de cuentas personales h
 - **Responsivo**: La aplicación está diseñada para adaptarse a cualquier dispositivo, proporcionando una experiencia fluida tanto en pantallas grandes como en dispositivos móviles. Desde la página de favoritos, los usuarios pueden gestionar su colección personalizada eliminando Pokémon que ya no deseen conservar. Para ello, pueden regresar a la página de búsqueda (searchPage), localizar el Pokémon que desean eliminar y utilizar un botón específico para quitarlo de su lista de favoritos.
 Además, la aplicación cuenta con un menú desplegable intuitivo que facilita la navegación hacia las diferentes rutas disponibles, como la página de búsqueda, favoritos o cualquier otra sección. Este menú mejora la experiencia del usuario al permitir un acceso rápido y organizado a las funcionalidades clave de la aplicación.
 <p align="center">
-<img src="./public/responsive..gif" alt="Descripción del GIF" width="400"/>
+<img src="./public/responsive.gif" alt="Descripción del GIF" width="400"/>
 </p>
 
 
