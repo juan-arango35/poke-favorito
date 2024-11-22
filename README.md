@@ -1,6 +1,6 @@
 # 🌟 POKEMON FAVORITO
 
-Esta aplicación permite a los usuarios explorar un catálogo de Pokémon obtenido de una API externa pública. Desde la página principal, los usuarios pueden buscar Pokémon, visualizar información detallada y añadirlos o quitarlos de su lista de favoritos. La funcionalidad de favoritos es completamente interactiva y dinámica, permitiendo gestionar la lista de manera instantánea y sin restricciones en la cantidad de Pokémon favoritos. Además esta aplicación es responsiva para distintos dispositivos moviles, tablet y pc.
+## _Esta aplicación permite a los usuarios explorar un catálogo de Pokémon obtenido de una API externa pública. Desde la página principal, los usuarios pueden buscar Pokémon, visualizar información detallada y añadirlos o quitarlos de su lista de favoritos. La funcionalidad de favoritos es completamente interactiva y dinámica, permitiendo gestionar la lista de manera instantánea y sin restricciones en la cantidad de Pokémon favoritos. Además esta aplicación es responsiva para distintos dispositivos moviles, tablet y pc._
 
 Adicionalmente, la aplicación incluye un sistema de autenticación que permite a los usuarios registrarse y crear una cuenta personalizada. Esto asegura que cada usuario tenga acceso exclusivo a su propia lista de favoritos, brindando una experiencia más personalizada y segura.
 
@@ -25,7 +25,7 @@ La combinación de interacción con la API y la gestión de cuentas personales h
    cd nombre_del_proyecto
    npm install
    npm run dev
-   ```
+   
 
 ## Proceso
 - **Login seguro**: Permite crear un usuario proporcionando los campos de correo electrónico (email), contraseña, nombre (firstname) y apellido (lastname). Una vez registrado, los usuarios pueden iniciar sesión solo con su correo electrónico y contraseña. Si se ingresa información incorrecta, el sistema mostrará un mensaje de "Credenciales inválidas". Los usuarios con rol de admin tienen acceso completo a todas las rutas de la aplicación.
