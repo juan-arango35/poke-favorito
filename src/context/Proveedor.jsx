@@ -9,6 +9,7 @@ import { tokenKey } from "../config";
 const Proveedor = ({ children }) => {
     //el de abajo es el estado para tarer los datos del usuario logeado
   const [user, setUser] = useState(null);
+  console.log(user, "user");
 
    //utilzamos get
    useEffect(() => {
